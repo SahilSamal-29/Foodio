@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="143sp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/eachitem"
+        android:foregroundGravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="125sp"
+        android:layout_marginBottom="15sp"
+        android:layout_marginTop="3sp"
+        android:elevation="15sp"
+        app:cardCornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/foodpic"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/paneer" />
+
+        <TextView
+            android:id="@+id/tvItemNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150sp"
+            android:layout_marginTop="20sp"
+            android:text="Shahi paneer"
+            android:textColor="#292929"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_marginStart="275sp"
+            android:layout_marginTop="65sp"
+            android:backgroundTint="#FF4141"
+            android:focusedSearchResultHighlightColor="@color/black"
+            android:text="Add +"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+
+        <TextView
+            android:id="@+id/tvPriceTag"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_marginLeft="150sp"
+            android:layout_marginTop="80sp"
+            android:text="200 Rs"
+            android:textAlignment="center"
+            android:textColor="#151515"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
