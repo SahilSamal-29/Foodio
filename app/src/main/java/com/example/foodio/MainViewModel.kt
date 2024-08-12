@@ -1,4 +1,6 @@
 package com.example.foodio
 
-class MainViewModel {
+import androidx.lifecycle.ViewModel
+
+class MainViewModel: ViewModel(){
 }
