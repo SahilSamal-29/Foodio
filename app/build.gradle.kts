@@ -67,11 +67,11 @@ dependencies {
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
 
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation(libs.retrofit)
+    implementation (libs.converter.gson)
 
-    implementation ("com.google.code.gson:gson:2.11.0")
+    implementation (libs.gson)
 
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
+//    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
 }

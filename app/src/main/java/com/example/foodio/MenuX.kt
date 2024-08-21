@@ -6,5 +6,6 @@ data class MenuX(
     val description: String,
     val id: Int,
     val name: String,
-    val price: Double
+    val price: Double,
+    var quantity: Int = 0
 )
