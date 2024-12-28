@@ -1,19 +1,28 @@
 package com.example.foodio
 
+import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 
-class MainViewModel(private val repository: MenuRepository): ViewModel(){
+class MainViewModel: ViewModel() {
+    private val _items = MutableLiveData<List<Items>>()
+    val items: LiveData<List<Items>> = _items
 
-    val menuItems: LiveData<List<MenuItem>> = repository.menuItems
-
-    fun fetchMenuItems() {
-        repository.fetchMenuItems()
+    init{
+        fetchItems()
     }
 
-    fun incrementItemQuantity(item: MenuX) {
-        item.quantity += 1
-        // Update LiveData with the new list to trigger UI updates
-        repository.fetchMenuItems()
+    private fun fetchItems(){
+        viewModelScope.launch{
+            try{
+                val response = RetrofitInstance.apiService.fetchItems()
+                _items.postValue(response.menu)
+            }catch (e: Exception){
+                Log.e("MainViewModel", "Error fetching items", e)
+            }
+        }
     }
 }

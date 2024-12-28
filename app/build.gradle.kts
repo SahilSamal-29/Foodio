@@ -61,15 +61,14 @@ dependencies {
 
     implementation (libs.firebase.ui.auth)
 
-    // Required only if Facebook login support is required
-    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
-
+//     Required only if Facebook login support is required
+//     Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.retrofit)
     implementation (libs.converter.gson)
-
+//    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
     implementation (libs.gson)
 
 //    implementation ("com.github.bumptech.glide:glide:4.16.0")

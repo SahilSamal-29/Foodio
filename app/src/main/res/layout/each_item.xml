@@ -26,7 +26,7 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/paneer" />
+                android:src="@drawable/rb_62307" />
 
             <TextView
                 android:id="@+id/tvItemNameLabel"
