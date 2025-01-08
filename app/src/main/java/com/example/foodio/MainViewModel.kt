@@ -18,6 +18,8 @@ class MainViewModel: ViewModel() {
     private val _cartCount = MutableLiveData<Int>(0)
     val cartCount: LiveData<Int> = _cartCount
 
+//    private val _cartItems = MutableLiveData<MutableList<Items>>(mutableListOf())
+//    val cartItems: MutableLiveData<MutableList<Items>> get() = _cartItems
     private val _cartItems = MutableLiveData<MutableList<Items>>(mutableListOf())
     val cartItems: MutableLiveData<MutableList<Items>> get() = _cartItems
 
@@ -51,6 +53,8 @@ class MainViewModel: ViewModel() {
         val currentCart = _cartItems.value ?: mutableListOf()
         currentCart.add(item)
         _cartItems.value = currentCart
+        Log.d("MainViewModel", "Added item to cart: $item")
+        Log.d("MainViewModel", "Updated cart items: ${_cartItems.value}")
     }
 
     // Remove an item from the cart
