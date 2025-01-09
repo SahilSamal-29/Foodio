@@ -35,6 +35,9 @@ Foodio is an interactive food-ordering app designed with a visually appealing us
 
 ## Screenshots
 
+### Splash Screen
+<img src="https://github.com/user-attachments/assets/28143dce-0503-49f9-8679-832708d26e09" alt="Screenshot" width="250">
+
 ### Sign-in & Sign-up Screens
 <img src="https://github.com/user-attachments/assets/1e7196ad-63be-4883-8333-582eba116f5a" alt="Screenshot" width="250">
 <img src="https://github.com/user-attachments/assets/dd5e9e34-ad35-488e-890c-dd71643f2106" alt="Screenshot" width="250">
