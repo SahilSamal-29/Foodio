@@ -59,11 +59,8 @@ class MainViewModel: ViewModel() {
 
     // Remove an item from the cart
     fun removeItemFromCart(item: Items) {
-        val currentCart = _cartItems.value ?: mutableListOf()
-        if (currentCart.contains(item)) {
-            currentCart.remove(item)
-            _cartItems.value = currentCart
-        }
+        _cartCount.value = (_cartCount.value ?: 0) - 1
+        Log.d("MainViewModel", "Removed item from cart: $item")
     }
 
     // Clear the cart
